@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: flask-config
+data:
+  config-cluster.json: |
+    {
+      "SERVER_PORT": 4000,
+      "EXPIRATION_TIME": 300,
+      "COIN_NAME": "bitcoin",
+      "HOST_API": "https://rest.coinapi.io/v1/assets/btc",
+      "API_KEY": "651C9D37-75A2-4209-B93B-18FB23CCA1B3",
+      "REDIS_HOST": "redis-service",
+      "REDIS_PORT": 6379,
+      "RETURN_HOST_NAME": true
+    }
